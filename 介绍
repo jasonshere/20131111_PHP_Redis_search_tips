@@ -1,0 +1,20 @@
+PHP_Redis_search_tips
+=====================
+
+本库文件是2013年11月11日【捷哥浅谈PHP】YY在线免费公开课第三弹之【Redis数据库如何构建高性能的web搜索提示功能】的示例代码。
+
+Redis数据库实现高性能搜索提示功能。
+
+1.dict.php 是根据字典文件生成索引的脚本文件。
+
+2.search.php 是根据搜索关键字查询提示的功能脚本文件。
+
+3.search.html 是搜索提示的特效html文件
+
+捷哥浅谈PHP网址：http://www.lamplijie.com
+
+捷哥微博：http://weibo.com/lamplijie
+
+捷哥视频地址：http://www.lamplijie.com
+
+【捷哥浅谈PHP】YY频道号：yy://join:room_id=46392657/
