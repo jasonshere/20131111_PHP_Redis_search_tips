@@ -4,7 +4,6 @@
 
 	$redis->connect("localhost",6379);
 
-
 	header("content-type:text/html;charset=utf-8");
 	//读取字典文件
 	$lines = file("/tmp/words.txt");
