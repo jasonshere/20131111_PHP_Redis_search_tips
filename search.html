@@ -1,0 +1,27 @@
+<input type="text" style="width:200px" />
+
+<div style="height:200px;border:1px solid #ccc;overflow:auto;width:200px;display:none"></div>
+
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+<script>
+	$("input").keyup(function(){
+		$.get("search.php",{"key":$(this).val()},function(data){
+			//alert(data);
+			$("div").html("");
+			for(var i=0;i<data.length;i++){
+				$("div").css("display","block");
+				$("div").append("<p style='padding:0;margin:0;border-bottom:1px dashed #ccc;background-color:white'>"+data[i]+"</p>");
+				
+				$("p").mouseover(function(){
+					$(this).css("backgroundColor","#ccc");
+				}).mouseout(function(){
+					$(this).css("backgroundColor","white");
+				}).click(function(){
+					$("input").val($(this).html());
+					$("div").hide();
+				});
+			}
+		},'json');
+	});
+</script>
